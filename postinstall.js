@@ -6,6 +6,7 @@ const getVercelIconFolder = () => path.join(__dirname, '.vercel', 'output', 'sta
 const getStaticIconFolder = () => path.join(__dirname, 'public', 'icons');
 async function main() {
     if (!fs.existsSync(getStaticIconFolder())) fs.mkdirSync(getStaticIconFolder());
+    if (!fs.existsSync(getVercelIconFolder())) fs.mkdirSync(getVercelIconFolder());
     const files = fs.readdirSync(getModuleIconFolder());
     for (const file of files) {
         fs.copyFileSync(
