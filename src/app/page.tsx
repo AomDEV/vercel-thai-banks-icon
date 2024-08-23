@@ -32,12 +32,13 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full grid grid-cols-6 lg:grid-cols-12 gap-4">
-          {Object.keys(ICON_LIST).map((icon) => (
+          {Object.keys(ICON_LIST).map((icon, index) => (
             <div
               className="text-center flex flex-col gap-1 items-center cursor-pointer"
               onClick={() => setIconInfo(Object.assign(ICON_LIST[icon], {
                 symbol: icon
               }))}
+              key={index}
             >
               <IconViewer icon={icon} size={"huge"} shadow />
               <div className="text-sm">{icon.toUpperCase()}</div>
