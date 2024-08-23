@@ -113,12 +113,6 @@ export default function Home() {
             <div className="mt-2 flex items-center gap-2 justify-end">
               <button
                 className="border p-2 rounded"
-                onClick={() => push(`/image/${iconInfo.symbol}`)}
-              >
-                PNG
-              </button>
-              <button
-                className="border p-2 rounded"
                 onClick={closeModal}
               >
                 Close
