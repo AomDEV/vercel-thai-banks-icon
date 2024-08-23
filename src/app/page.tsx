@@ -45,6 +45,18 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <footer className="text-center flex flex-col items-center justify-center p-2 mt-4">
+          <div className="flex items-center gap-2">
+            <img
+              src={"https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"}
+              className="w-4 h-4 rounded-full"
+            />
+            <a href={"https://github.com/AomDEV/vercel-thai-banks-icon"} className="text-sm text-muted">
+              Source Code
+            </a>
+          </div>
+          <a href={"https://github.com/AomDEV"}>@AomDEV</a>
+        </footer>
       </main>
       {iconInfo && iconInfo.symbol && <div className="min-h-screen absolute top-0 left-0 z-[1] w-full h-full">
         <div className="w-full h-full absolute z-[2] flex items-center justify-center">
@@ -74,6 +86,21 @@ export default function Home() {
                 className="border bg-white h-full p-2"
                 disabled={!pngUrl}
                 onClick={() => pngUrl && copy(pngUrl)}
+              >
+                Copy
+              </button>
+            </div>
+            <div className="flex items-center gap-1 mb-2">
+              <input
+                value={`bank bank-${iconInfo.symbol}`}
+                readOnly
+                disabled
+                className="w-full p-2 border"
+              />
+              <button
+                className="border bg-white h-full p-2"
+                disabled={!pngUrl}
+                onClick={() => copy(`bank bank-${iconInfo.symbol}`)}
               >
                 Copy
               </button>
