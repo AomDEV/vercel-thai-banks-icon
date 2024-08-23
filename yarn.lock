@@ -588,7 +588,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-"css-finances@git+https://github.com/AomDEV/css-finances.git#release":
+"css-finances@git+https://github.com/AomDEV/css-finances#release":
   version "1.0.0"
   resolved "git+ssh://git@github.com/AomDEV/css-finances.git#ea41428044619fa1270ea20b10aeee0dd3f3b0af"
   dependencies:

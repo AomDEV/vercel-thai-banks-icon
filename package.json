@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "css-finances": "git+https://github.com/AomDEV/css-finances.git#release",
+    "css-finances": "git+https://github.com/AomDEV/css-finances#release",
     "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18"
