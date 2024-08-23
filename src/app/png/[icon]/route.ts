@@ -1,5 +1,6 @@
 "use server";
 import { IconHelper } from "css-finances"
+import { existsSync } from "fs";
 import { readFile } from "fs/promises";
 import getConfig from "next/config";
 import { NextRequest, NextResponse } from "next/server";
@@ -18,7 +19,17 @@ export async function GET(
   const width = Number(req.nextUrl.searchParams.get("width") || 256)
   const height = Number(req.nextUrl.searchParams.get("height") || 256)
 
-  const svgPath = await readFile(join(serverRuntimeConfig.PROJECT_ROOT, 'public', 'icons', `${icon}.svg`));
+  const hasNextFolder = existsSync(join(serverRuntimeConfig.PROJECT_ROOT, '_next'));
+  const hasIconFolder = existsSync(join(serverRuntimeConfig.PROJECT_ROOT, 'icons'));
+  const isVercelDeployed = hasNextFolder && hasIconFolder;
+  const svgPath = await readFile(
+    join(...[
+      serverRuntimeConfig.PROJECT_ROOT,
+      isVercelDeployed && 'public',
+      'icons',
+      `${icon}.svg`
+    ].filter(Boolean))
+  );
   const imageBuffer = await IconHelper.getBuffer(icon, {
     width,
     height,
