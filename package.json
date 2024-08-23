@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "css-finances": "ssh://git@github.com:AomDEV/css-finances.git",
+    "css-finances": "https://github.com/AomDEV/css-finances.git",
     "next": "14.2.6",
     "node_modules-path": "^2.0.8",
     "react": "^18",
