@@ -738,7 +738,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
 
 "css-finances@git+https://github.com/AomDEV/css-finances#release":
   version "1.0.0"
-  resolved "git+ssh://git@github.com/AomDEV/css-finances.git#6c11d4e3275c7f46f0491d685cf7bf4972551cc7"
+  resolved "git+https://github.com/AomDEV/css-finances.git#6c11d4e3275c7f46f0491d685cf7bf4972551cc7"
   dependencies:
     sharp "^0.33.5"
 
